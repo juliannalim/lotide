@@ -27,15 +27,25 @@ const eqArrays = function (arrayOne, arrayTwo) {
 const without = function (original, itemsToRemove) {
   let newList = [];
   for (let i = 0; i < original.length; i++) {
-    if (original[i] !== itemsToRemove[i]) {
+    let foundMatch = false;
+    for (let j = 0; j < itemsToRemove.length; j++) {
+      if (original[i] === itemsToRemove[j]) {
+        foundMatch = true;
+      }
+    }
+    if (!foundMatch) {
       newList.push(original[i]);
     }
   }
   return newList;
 }
 
-console.log(without([1, 2, 3], [1]))// => [2, 3]
+console.log(without([1, 2, 3], [1, 3]))// => [2, 3]
+
 console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+console.log(without([2, 1, 2, 3], [2, 5]));
+
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
