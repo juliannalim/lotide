@@ -29,6 +29,15 @@ const without = function (original, itemsToRemove) {
   for (let i = 0; i < original.length; i++) {
     let foundMatch = false;
     for (let j = 0; j < itemsToRemove.length; j++) {
+
+      // console.log('original', original[i]);
+      // console.log('itemsToRemove', itemsToRemove[j]);
+      // console.log('');
+
+      // if (original[i] !== itemsToRemove[j]) {
+      //   newList.push(original[i]);
+      // }
+
       if (original[i] === itemsToRemove[j]) {
         foundMatch = true;
       }
