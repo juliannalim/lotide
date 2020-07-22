@@ -1,4 +1,7 @@
 const assertArraysEqual = function (actualArray, expectedArray) {
+  if (typeof (actualArray) !== 'object' || typeof (expectedArray) !== 'object') {
+    return `🛑🛑🛑 Assertion Failed: ${[actualArray]} !== ${[expectedArray]}`;
+  }
   if (actualArray.length !== expectedArray.length) {
     return (`🛑🛑🛑 Assertion Failed: ${[actualArray]} !== ${[expectedArray]}`);
   } for (let i = 0; i < actualArray.length; i++) {
@@ -39,10 +42,13 @@ const without = function (original, itemsToRemove) {
       // }
 
       if (original[i] === itemsToRemove[j]) {
+        // if this is true it won't push
         foundMatch = true;
       }
     }
+    // within the i for loop, outside of j for loop to make sure we compare the entire j array to i array
     if (!foundMatch) {
+      // if foundMatch stays false aka nothing changed, push original[i]
       newList.push(original[i]);
     }
   }
