@@ -24,10 +24,15 @@ const eqArrays = function (arrayOne, arrayTwo) {
 };
 
 const eqObjects = function (object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length) {
+  const keys1 = (Object.keys(object1));
+  const keys2 = (Object.keys(object2));
+  console.log(keys1);
+  console.log(keys2);
+  if (keys1.length !== keys2.length) {
     return false;
   }
-  for (let key in object1) {
+
+  for (let key of keys1) {
 
     // check if the key is an array
     if (Array.isArray(object1[key])) {
