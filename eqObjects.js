@@ -1,27 +1,27 @@
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${[actual]} !== ${[expected]}`);
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${[actual]} === ${[expected]}`);
-  }
-};
+// const assertEqual = function (actual, expected) {
+//   if (actual !== expected) {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${[actual]} !== ${[expected]}`);
+//   } else {
+//     console.log(`✅✅✅ Assertion Passed: ${[actual]} === ${[expected]}`);
+//   }
+// };
 
-const eqArrays = function (arrayOne, arrayTwo) {
-  if (Array.isArray(arrayOne) === false || Array.isArray(arrayTwo) === false) {
-    return false;
-  }
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  }
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = function (arrayOne, arrayTwo) {
+//   if (Array.isArray(arrayOne) === false || Array.isArray(arrayTwo) === false) {
+//     return false;
+//   }
+//   if (arrayOne.length !== arrayTwo.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < arrayOne.length; i++) {
+//     if (arrayOne[i] !== arrayTwo[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
 const eqObjects = function (object1, object2) {
   const keys1 = (Object.keys(object1));
@@ -52,10 +52,10 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// console.log(eqObjects(cd, dc)); // => true
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); 
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// console.log(eqObjects(cd, cd2)); 
