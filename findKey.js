@@ -7,9 +7,9 @@ const assertEqual = function (actual, expected) {
 };
 
 const findKey = function (object, callback) {
-  for (let city in object) {
-    if (callback(object[city])) {
-      return city;
+  for (let place in object) {
+    if (callback(object[place])) {
+      return place;
     }
     // console.log(object[city]);
 

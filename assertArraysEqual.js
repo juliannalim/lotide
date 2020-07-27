@@ -12,8 +12,10 @@ const assertArraysEqual = function (actualArray, expectedArray) {
   return (`✅✅✅ Assertion Passed: ${[actualArray]} === ${[expectedArray]}`);
 };
 
+module.exports = assertArraysEqual;
 
-console.log(assertArraysEqual(['hello'], 'abc'));
-console.log(assertArraysEqual(123456, 123456));
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
-console.log(assertArraysEqual('potato', 'potatolife'));
+// TEST CODE
+// console.log(assertArraysEqual(['hello'], 'abc'));
+// console.log(assertArraysEqual(123456, 123456));
+// console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+// console.log(assertArraysEqual('potato', 'potatolife'));
