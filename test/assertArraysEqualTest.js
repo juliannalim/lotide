@@ -1,7 +1,9 @@
 const assertArraysEqual = require('../assertArraysEqual');
+const eqArrays = require('../eqArrays');
+
+assertArraysEqual(['hello'], 'abc');
+assertArraysEqual(123456, 123456);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual('potato', 'potatolife');
 
 
-console.log(assertArraysEqual(['hello'], 'abc'));
-console.log(assertArraysEqual(123456, 123456));
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
-console.log(assertArraysEqual('potato', 'potatolife'));
